@@ -29,7 +29,15 @@ public class LinkedList {
         }
     }
 
-    public Node head = null;
+    Node head = null;
+
+    public Node getHead() {
+        return head;
+    }
+
+    public void setHead(Node head) {
+        this.head = head;
+    }
 
     public void add(int day, int floor) {
 

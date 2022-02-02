@@ -32,8 +32,8 @@ public class LinkedListSkyscraperService {
     }
 
     public void assemblyPlan(int no_of_floors) {
-        linkedList.head = linkedList.mergeSort(linkedList.head);
-        LinkedList.Node temp = linkedList.head;
+        linkedList.setHead(linkedList.mergeSort(linkedList.getHead()));
+        LinkedList.Node temp = linkedList.getHead();
 
         for (int i = 1; i<= no_of_floors; i++) {
             System.out.println("\nDay: " + i);
