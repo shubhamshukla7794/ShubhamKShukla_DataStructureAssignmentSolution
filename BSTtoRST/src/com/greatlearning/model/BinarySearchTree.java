@@ -17,7 +17,7 @@ public class BinarySearchTree {
         this.root = root;
     }
 
-    //    public Node insertNode(Node root, int data) {
+//        public Node insertNode(Node root, int data) {
 //        if (root == null) {
 //            root = new Node(data);
 //            return root;
@@ -33,6 +33,8 @@ public class BinarySearchTree {
 //
 //    }
 
+//    This method creates RST using new Node(data);
+//    ---------------------------------------------
     public void convertToRST(Node root) {
         if (root == null) {
             return;
@@ -42,6 +44,27 @@ public class BinarySearchTree {
         skew(root.key);
         convertToRST(root.right);
     }
+
+//    This method creates RST using existing nodes of BST
+//    ---------------------------------------------------
+    public void convertToRST2(Node root) {
+        if (root == null) {
+            return;
+        }
+
+        convertToRST2(root.left);
+        if (skewRoot == null) {
+            skewRoot = root;
+            root.left = null;
+            current = skewRoot;
+        }else {
+            current.right = root;
+            root.left = null;
+            current = current.right;
+        }
+        convertToRST2(root.right);
+    }
+
 
     public void print(Node root) {
         if (root == null) {

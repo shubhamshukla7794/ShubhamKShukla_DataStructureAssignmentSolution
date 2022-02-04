@@ -15,7 +15,16 @@ public class Driver {
         tree.getRoot().getRight().setLeft(new Node(55));
 
 //        System.out.println("Tree");
-        tree.convertToRST(tree.getRoot());
+//        tree.print(tree.getRoot());
+//        System.out.println("");
+
+//        Creates RST using new Node(data);
+//        --------------------------------
+//        tree.convertToRST(tree.getRoot());
+
+//        Creates RST using existing nodes of BST
+//        ---------------------------------------
+        tree.convertToRST2(tree.getRoot());
         tree.print(tree.getSkewRoot());
     }
 
