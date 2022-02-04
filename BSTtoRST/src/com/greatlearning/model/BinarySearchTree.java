@@ -17,36 +17,8 @@ public class BinarySearchTree {
         this.root = root;
     }
 
-//        public Node insertNode(Node root, int data) {
-//        if (root == null) {
-//            root = new Node(data);
-//            return root;
-//        }
-//
-//        if (data < root.key) {
-//            root.left = insertNode(root.left, data);
-//        } else if (data > root.key) {
-//            root.right = insertNode(root.right, data);
-//        }
-//
-//        return root;
-//
-//    }
-
-//    This method creates RST using new Node(data);
-//    ---------------------------------------------
-    public void convertToRST(Node root) {
-        if (root == null) {
-            return;
-        }
-
-        convertToRST(root.left);
-        skew(root.key);
-        convertToRST(root.right);
-    }
-
-//    This method creates RST using existing nodes of BST
-//    ---------------------------------------------------
+//    This method creates RST by modifying BST
+//    ----------------------------------------
     public void convertToRST2(Node root) {
         if (root == null) {
             return;
@@ -56,7 +28,7 @@ public class BinarySearchTree {
         if (skewRoot == null) {
             skewRoot = root;
             root.left = null;
-            current = skewRoot;
+            current = root;
         }else {
             current.right = root;
             root.left = null;
@@ -75,15 +47,42 @@ public class BinarySearchTree {
         System.out.print(root.key + " ");
         print(root.right);
     }
+//        public Node insertNode(Node root, int data) {
+//        if (root == null) {
+//            root = new Node(data);
+//            return root;
+//        }
+//
+//        if (data < root.key) {
+//            root.left = insertNode(root.left, data);
+//        } else if (data > root.key) {
+//            root.right = insertNode(root.right, data);
+//        }
+//
+//        return root;
+//
+//    }
 
-    public void skew(int data) {
-        if (skewRoot == null) {
-            skewRoot = new Node(data);
-            current = skewRoot;
-        }else {
-            current.right = new Node(data);
-            current = current.right;
-        }
-    }
+//    This method creates RST using new Node(data);
+//    ---------------------------------------------
+//    public void convertToRST(Node root) {
+//        if (root == null) {
+//            return;
+//        }
+//
+//        convertToRST(root.left);
+//        skew(root.key);
+//        convertToRST(root.right);
+//    }
+
+//    public void skew(int data) {
+//        if (skewRoot == null) {
+//            skewRoot = new Node(data);
+//            current = skewRoot;
+//        }else {
+//            current.right = new Node(data);
+//            current = current.right;
+//        }
+//    }
 
 }

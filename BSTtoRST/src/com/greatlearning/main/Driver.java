@@ -22,8 +22,8 @@ public class Driver {
 //        --------------------------------
 //        tree.convertToRST(tree.getRoot());
 
-//        Creates RST using existing nodes of BST
-//        ---------------------------------------
+//        Creates RST by modifying BST
+//        ----------------------------
         tree.convertToRST2(tree.getRoot());
         tree.print(tree.getSkewRoot());
     }
