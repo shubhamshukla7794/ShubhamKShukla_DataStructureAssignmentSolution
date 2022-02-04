@@ -32,7 +32,7 @@ public class LinkedListSkyscraperService {
         return no_of_floors;
     }
 
-    public void assemblyPlan(int no_of_floors) {
+    public void assemblyPlanUsingLinkedList(int no_of_floors) {
         linkedList.setHead(linkedList.mergeSort(linkedList.getHead()));
         Node temp = linkedList.getHead();
 

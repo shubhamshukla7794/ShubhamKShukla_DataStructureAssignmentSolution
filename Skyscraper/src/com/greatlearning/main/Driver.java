@@ -1,16 +1,30 @@
 package com.greatlearning.main;
 
 import com.greatlearning.service.LinkedListSkyscraperService;
+import com.greatlearning.service.StackSkyscraperService;
 
 public class Driver {
 
     public static void main(String[] args) {
-        LinkedListSkyscraperService service = new LinkedListSkyscraperService();
 
-        int no_of_floors = service.setConstructionDetails();
-        service.assemblyPlan(no_of_floors);
+//        Using LinkedList
+//        ================
+//        LinkedListSkyscraperService service = new LinkedListSkyscraperService();
+//        int no_of_floors = service.setConstructionDetails();
+//        service.assemblyPlanUsingLinkedList(no_of_floors);
 
-//  FOR SIMPLE PRINTING OF THE LINKED LIST - USED FOR CHECKING PURPOSE ONLY
+
+//        Using Stacks
+//        ===========
+        StackSkyscraperService stackService = new StackSkyscraperService();
+        int no_of_floors = stackService.inputFloors();
+        stackService.assemblyPlanUsingStacks(no_of_floors);
+
+
+
+//        IGNORABLE
+//        ---------
+//        FOR SIMPLE PRINTING OF THE LINKED LIST - USED FOR CHECKING PURPOSE ONLY
 //        LinkedList linkedList = new LinkedList();
 
 //        linkedList.add(1,3);

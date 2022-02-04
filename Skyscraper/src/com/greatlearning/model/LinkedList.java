@@ -27,6 +27,8 @@ public class LinkedList {
 //        }
 //    }
 
+
+//    MergeSort on LinkedList
     Node sortedMerge(Node left, Node right) {
 
         Node result;
