@@ -41,8 +41,7 @@ public class LinkedListSkyscraperService {
             if (i == temp.getDay()) {
                 System.out.print(temp.getFloor());
 
-                while (temp.getNextNode() != null && temp.getFloor() - temp.getNextNode().getFloor() == 1
-                            && temp.getDay() > temp.getNextNode().getDay()) {
+                while (temp.getNextNode() != null && temp.getDay() > temp.getNextNode().getDay()) {
                         temp = temp.getNextNode();
                         System.out.print(" " + temp.getFloor());
                     }
