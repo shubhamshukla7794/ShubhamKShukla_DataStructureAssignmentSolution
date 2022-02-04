@@ -1,33 +1,6 @@
 package com.greatlearning.model;
 
-
-
-
 public class LinkedList {
-
-    public static class Node {
-
-        int day;
-        int floor;
-        Node nextNode;
-
-        public Node(int day, int floor) {
-            this.day = day;
-            this.floor = floor;
-        }
-
-        public int getDay() {
-            return day;
-        }
-
-        public int getFloor() {
-            return floor;
-        }
-
-        public Node getNextNode() {
-            return nextNode;
-        }
-    }
 
     Node head = null;
 
@@ -93,7 +66,7 @@ public class LinkedList {
         return sortedMerge(left, right);
     }
 
-    static Node getMiddle(Node head) {
+    public Node getMiddle(Node head) {
 
         if (head == null) {
             return head;

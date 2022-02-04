@@ -1,6 +1,7 @@
 package com.greatlearning.service;
 
 import com.greatlearning.model.LinkedList;
+import com.greatlearning.model.Node;
 
 import java.util.Scanner;
 
@@ -33,7 +34,7 @@ public class LinkedListSkyscraperService {
 
     public void assemblyPlan(int no_of_floors) {
         linkedList.setHead(linkedList.mergeSort(linkedList.getHead()));
-        LinkedList.Node temp = linkedList.getHead();
+        Node temp = linkedList.getHead();
 
         for (int i = 1; i<= no_of_floors; i++) {
             System.out.println("\nDay: " + i);
